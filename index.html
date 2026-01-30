@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento de Carga - 36h</title>
+    <title>Wiu Rastreamento Seguro</title>
+    
+    <link rel="icon" type="image/png" href="logo.png">
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div id="login-overlay" class="login-overlay">
         <div class="login-box">
-            <h2>Rastreamento Logístico</h2>
-            <p>Viagem de Longa Duração (36h)</p>
-            <input type="text" id="access-code" placeholder="Código de Rastreio" maxlength="6">
-            <button id="btn-login">Localizar Veículo</button>
-            <p id="error-msg" style="display: none;">Código não encontrado.</p>
+            <img src="logo.png" alt="Wiu Logo" class="logo">
+
+            <h2>Wiu Rastreamento Seguro</h2>
+            <p>Insira o código de rastreio para visualizar a carga.</p>
+            
+            <input type="text" id="access-code" placeholder="Código de Acesso" maxlength="6">
+            <button id="btn-login">Rastrear Carga</button>
+            <p id="error-msg" style="display: none;">Código inválido.</p>
         </div>
     </div>
 
@@ -39,6 +44,6 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
