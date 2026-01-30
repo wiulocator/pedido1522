@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Carga - 36h</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-box">
+            <h2>Rastreamento Logístico</h2>
+            <p>Viagem de Longa Duração (36h)</p>
+            <input type="text" id="access-code" placeholder="Código de Rastreio" maxlength="6">
+            <button id="btn-login">Localizar Veículo</button>
+            <p id="error-msg" style="display: none;">Código não encontrado.</p>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="delivery-info" id="info-card" style="display: none;">
+        <div class="driver-avatar"></div>
+        <div class="info-text">
+            <h3>Transporte em Andamento</h3>
+            <span class="status-badge" id="time-badge">CALCULANDO PREVISÃO...</span>
+            <div class="route-details">
+                <p><strong>Origem:</strong> Goiânia - GO</p>
+                <p><strong>Destino:</strong> Nova Aliança - SP</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

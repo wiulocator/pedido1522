@@ -1,0 +1,81 @@
+body { margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; overflow: hidden; }
+
+/* MAPA */
+#map { height: 100vh; width: 100%; z-index: 1; }
+
+/* TELA DE LOGIN */
+.login-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(13, 17, 23, 0.95); /* Fundo escuro moderno */
+    z-index: 9999;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.login-box {
+    background: white; padding: 40px; border-radius: 12px;
+    text-align: center; width: 90%; max-width: 350px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.login-box h2 { color: #1f2937; margin-bottom: 5px; }
+.login-box p { color: #6b7280; font-size: 14px; margin-bottom: 20px; }
+
+.login-box input {
+    width: 100%; padding: 12px; margin: 10px 0;
+    border: 1px solid #d1d5db; border-radius: 6px;
+    font-size: 16px; text-align: center; text-transform: uppercase; letter-spacing: 2px;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+}
+
+.login-box button {
+    width: 100%; padding: 12px; margin-top: 10px;
+    background: #2563eb; color: white; border: none; border-radius: 6px;
+    font-size: 16px; font-weight: 600; cursor: pointer;
+    transition: background 0.2s;
+}
+.login-box button:hover { background: #1d4ed8; }
+
+#error-msg { color: #dc2626; font-size: 13px; margin-top: 10px; }
+
+/* CARD DE INFORMAÇÕES */
+.delivery-info {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    width: 90%; max-width: 420px;
+    background: white; padding: 20px; border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 1000; display: flex; align-items: flex-start; gap: 15px;
+}
+
+.driver-avatar {
+    width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+    background: #f3f4f6 url('https://ui-avatars.com/api/?name=Caminhao&background=2563eb&color=fff&size=128') center/cover;
+}
+
+.info-text { flex-grow: 1; }
+.info-text h3 { margin: 0 0 5px 0; font-size: 16px; color: #111827; }
+
+.route-details p { margin: 2px 0; font-size: 13px; color: #4b5563; }
+
+.status-badge {
+    display: inline-block; background: #dbeafe; color: #1e40af;
+    padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* BARRA DE PROGRESSO */
+.progress-container {
+    width: 100%; height: 6px; background-color: #e5e7eb;
+    border-radius: 3px; margin-top: 12px; overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%; background-color: #2563eb; width: 0%;
+    transition: width 1s linear;
+}
+
+/* ÍCONE DO CARRO NO MAPA */
+.car-icon {
+    font-size: 30px; line-height: 1; text-align: center;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: all 1s linear; /* Movimento fluido */
+}
