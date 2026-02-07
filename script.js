@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- CONFIGURAÇÃO DA VIAGEM ---
-    const TEMPO_TOTAL_HORAS = 36; // Duração exata pedida
-    const SENHA_ACESSO = "GO2026"; // Defina a senha que quiser
+    const TEMPO_TOTAL_HORAS = 48; // Duração alterada para 48 horas
+    const SENHA_ACESSO = "GO2026"; 
 
     // Coordenadas Reais
-    // Start: Goiânia, GO (-16.6667, -49.25)
-    // End: Nova Aliança, SP - CEP 15220-007 (-21.0158, -49.4958)
+    // Start: Montes Claros, MG
+    // End: Rua Turvolândia, SP (CEP 03939-060)
     const COORDS = {
-        start: [-49.2500, -16.6667], // OSRM usa [Longitude, Latitude]
-        end:   [-49.4958, -21.0158]  // OSRM usa [Longitude, Latitude]
+        start: [-43.8670745, -16.7291552], // [Longitude, Latitude] de Montes Claros
+        end:   [-46.5028223, -23.5971367]  // [Longitude, Latitude] do CEP 03939-060
     };
 
     // Variáveis de Controle
@@ -114,10 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
         map.fitBounds(polyline.getBounds(), { padding: [50, 50] });
 
         // Marcador de Início
-        L.marker(fullRoute[0]).addTo(map).bindPopup("<b>Origem:</b> Goiânia - GO");
+        L.marker(fullRoute[0]).addTo(map).bindPopup("<b>Origem:</b> Montes Claros - MG");
 
         // Marcador de Fim
-        L.marker(fullRoute[fullRoute.length - 1]).addTo(map).bindPopup("<b>Destino:</b> Nova Aliança - SP");
+        L.marker(fullRoute[fullRoute.length - 1]).addTo(map).bindPopup("<b>Destino:</b> São Paulo - SP");
 
         // Ícone do Caminhão
         const truckIcon = L.divIcon({
@@ -197,4 +197,5 @@ document.addEventListener('DOMContentLoaded', () => {
             badge.innerText = `EM TRÂNSITO: FALTA ${horasRestantes}h`;
         }
     }
+
 });
